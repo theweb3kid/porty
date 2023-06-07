@@ -1,5 +1,4 @@
 import React from "react";
-import { useDynamicContext } from "@dynamic-labs/sdk-react";
 
 import controlPanel from "../assets/control-panel.png";
 import cryptoWallet from "../assets/crypto-wallet.png";
@@ -16,14 +15,8 @@ const DesktopIcons = ({ windowDisplay, setWindowDisplay }) => {
     }
   };
 
-  const { user, handleLogOut, setShowAuthFlow } = useDynamicContext();
+  const buttonClickHandler = async () => {
 
-  const buttonClickHandler = () => {
-    if (user) {
-      handleLogOut();
-    } else {
-      setShowAuthFlow(true);
-    }
   };
 
   return (
@@ -40,7 +33,9 @@ const DesktopIcons = ({ windowDisplay, setWindowDisplay }) => {
 
       <div className="desktop-icon">
         <img
-          onClick={buttonClickHandler}
+          onClick={async () => {
+            await buttonClickHandler();
+          }}
           className="desktop-icon-img"
           src={cryptoWallet}
           alt="desktop-icon-recycle-bin"

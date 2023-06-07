@@ -32,6 +32,7 @@ const Window = ({ constraintsRef, windowDisplay, setWindowDisplay }) => {
       className="window"
     >
       <div className="window-header">
+      <div className="window-name">Browser</div>
         <img
           className="window-top-icon"
           onClick={() => {
@@ -63,8 +64,6 @@ const Window = ({ constraintsRef, windowDisplay, setWindowDisplay }) => {
           alt="window-top-icon"
         />
       </div>
-
-      <div className="window-name">Browser</div>
       <div className="window-header-2">
         <input
           type="search"
@@ -84,7 +83,7 @@ const Window = ({ constraintsRef, windowDisplay, setWindowDisplay }) => {
           title="Browser"
           className="browser-iframe"
           name="browser"
-          src="https://github.com/theweb3kid/porty"
+          src="https://example.com"
         >
           <p>Your browser does not support iFrames</p>
         </iframe>

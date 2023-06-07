@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { DynamicContextProvider } from "@dynamic-labs/sdk-react";
 
 import Window from "./components/Window";
 import Taskbar from "./components/Taskbar";
@@ -13,11 +12,6 @@ function App() {
   const constraintsRef = useRef(null);
 
   return (
-    <DynamicContextProvider
-      settings={{
-        environmentId: "2f2edc58-4bb1-4b66-acf7-5d31c7e11997"
-      }}
-    >
       <motion.div ref={constraintsRef} className="screen">
         <Window
           constraintsRef={constraintsRef}
@@ -39,7 +33,6 @@ function App() {
           setMenuDisplay={setMenuDisplay}
         />
       </motion.div>
-    </DynamicContextProvider>
   );
 }
 
